@@ -10,6 +10,23 @@
             box-sizing: border-box;
         }
 
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+
+        .mb-10 {
+            margin-bottom: 10px;
+        }
+
+        .mb-5 {
+            margin-bottom: 5px;
+        }
+
+        .mr-5 {
+            margin-right: 5px;
+        }
+
+        /* <!-- 헤더 start --> */
         header {
             background-image: url('./images/background.jpg');
             height: 800px;
@@ -42,19 +59,188 @@
             top: 10px;
             left: 50px;
             width: 430px;
-            height: 500px;
-            /*TODO 나중에 지워야지*/
             background-color: white;
             box-shadow: 5px 5px 10px 0px rgb(187, 186, 186);
+            border-radius: 1cqh;
+            padding: 30px;
         }
+
+        .search-btn {
+            display: flex;
+            justify-content: end;
+        }
+
+        button {
+            background-color: #FF5A5E;
+            color: white;
+            width: 60px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+        }
+
 
         table {
             width: 100%;
+            font-size: 15px;
+            font-weight: bold;
+
+
+        }
+
+
+        .input-field {
+            width: 100%;
+            height: 40px;
+            margin: 10px 0;
+            border: 1px solid #f1eaea;
         }
 
         table input {
             width: 100%;
         }
+
+        select {
+            width: 100%;
+        }
+
+        .serach-box-title {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        /* <!-- 헤더 end --> */
+
+        .body {
+            margin: 20px 80px;
+        }
+
+        section {
+            margin-bottom: 40px;
+
+        }
+
+
+        /* <!-- 에어비앤비 둘러보기 start --> */
+
+
+
+        .title {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .card-box {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-gap: 20px;
+
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            border-radius: 10px;
+            align-items: center;
+            border: 1px solid #E6E6E6;
+
+        }
+
+        .card img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+
+        }
+
+        .ad-img1 img {
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+            border-radius: 30px;
+        }
+
+        /* <!-- 에어비앤비 둘러보기 end --> */
+
+
+        /* <!-- 추천 여행지 start --> */
+
+
+        .img-box {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            grid-gap: 10px;
+        }
+
+        .img-box img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* <!-- 추천 여행지 end --> */
+
+        /* <!-- 에어비앤비 플러스를 만나보세요! start --> */
+        .sub-title {
+            font-size: 15px;
+        }
+
+        .ad-img2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* <!-- 에어비앤비 플러스를 만나보세요! end --> */
+
+        /* <!-- 전 세계 숙소 start --> */
+        .home-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+            justify-content: space-between;
+
+        }
+
+        .home-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .text1 {
+            color: #C4C4C7;
+            font-size: 10px;
+        }
+
+        .text2 {
+            color: #61575B;
+            font-weight: bold;
+        }
+
+        .grade-box {
+            display: flex;
+        }
+
+        .star {
+            color: #528E8D;
+        }
+
+        .count {
+            font-size: 14px;
+        }
+
+        .text3 {
+            font-size: 14px;
+        }
+
+        /* <!-- 전 세계 숙소 end --> */
     </style>
 </head>
 
@@ -79,14 +265,14 @@
                 </div>
             </nav>
             <div class="search-box">
-                <div>특색 있는 숙소와 즐길 거리를 예약하세요.</div>
-                <table border="1">
+                <div class="serach-box-title">특색 있는 숙소와 즐길 거리를 예약하세요.</div>
+                <table>
                     <tr>
                         <td colspan="2">목적지</td>
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <input type="text" placeholder="모든 위치">
+                            <input type="text" class="input-field" placeholder="모든 위치">
                         </td>
                     </tr>
                     <tr>
@@ -94,15 +280,15 @@
                         <td>체크아웃</td>
                     </tr>
                     <tr>
-                        <td><input type="date"></td>
-                        <td><input type="date"></td>
+                        <td><input type="date" class="input-field"></td>
+                        <td><input type="date" class="input-field"></td>
                     </tr>
                     <tr>
                         <td colspan="2">인원</td>
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <select>
+                            <select class="input-field">
                                 <option>인원</option>
                                 <option>1</option>
                                 <option>2</option>
@@ -110,7 +296,7 @@
                         </td>
                     </tr>
                 </table>
-                <div>
+                <div class="search-btn">
                     <button>검색</button>
                 </div>
             </div>
@@ -121,40 +307,58 @@
         <div class="body">
             <!-- 에어비앤비 둘러보기 start -->
             <section>
-                <div class="title">에어비앤비 둘러보기</div>
-                <div class="card-box">
+                <div class="title mb-20">에어비앤비 둘러보기</div>
+                <div class="card-box mb-20">
                     <div class="card">
-                        <div class="card-image"></div>
+                        <div class="card-image">
+                            <img src="./images/card1.jpg" alt="">
+                        </div>
                         <div class="card-title">숙수 및 부티크 호텔</div>
                     </div>
                     <div class="card">
-                        <div class="card-image"></div>
+                        <div class="card-image">
+                            <img src="./images/card2.jpg" alt="">
+                        </div>
                         <div class="card-title">트립</div>
                     </div>
                     <div class="card">
-                        <div class="card-image"></div>
+                        <div class="card-image">
+                            <img src="./images/card3.jpg" alt="">
+                        </div>
                         <div class="card-title">어드벤쳐</div>
                     </div>
                     <div class="card">
-                        <div class="card-image"></div>
+                        <div class="card-image">
+                            <img src="./images/card4.jpg" alt="">
+                        </div>
                         <div class="card-title">레스토랑</div>
                     </div>
                 </div>
-                <div class="ad-img">
-                    사막 사진
+                <div class="ad-img1">
+                    <img src="./images/ad1.jpg" alt="">
                 </div>
             </section>
             <!-- 에어비앤비 둘러보기 end -->
 
             <!-- 추천 여행지 start -->
             <section>
-                <div class="title">추천 여행지</div>
+                <div class="title mb-10">추천 여행지</div>
                 <div class="img-box">
-                    <div class="img">사진1</div>
-                    <div class="img">사진2</div>
-                    <div class="img">사진3</div>
-                    <div class="img">사진4</div>
-                    <div class="img">사진5</div>
+                    <div class="img">
+                        <img src="./images/choo1.png" alt="">
+                    </div>
+                    <div class="img">
+                        <img src="./images/choo2.png" alt="">
+                    </div>
+                    <div class="img">
+                        <img src="./images/choo3.png" alt="">
+                    </div>
+                    <div class="img">
+                        <img src="./images/choo4.png" alt="">
+                    </div>
+                    <div class="img">
+                        <img src="./images/choo5.png" alt="">
+                    </div>
                 </div>
             </section>
             <!-- 추천 여행지 end -->
@@ -162,99 +366,119 @@
             <!-- 에어비앤비 플러스를 만나보세요! start -->
             <section>
                 <div class="title">에어비앤비 플러스를 만나보세요</div>
-                <div class="sub-title">퀄리티와 인테리어 디자인이 검증된 숙소 컬렉션</div>
-                <div class="ad-img"></div>
+                <div class="sub-title mb-10">퀄리티와 인테리어 디자인이 검증된 숙소 컬렉션</div>
+                <div class="ad-img2">
+                    <img src="./images/ad2.png" alt="">
+                </div>
             </section>
             <!-- 에어비앤비 플러스를 만나보세요! end -->
 
             <!-- 전 세계 숙소 start -->
             <section>
-                <div class="title">전 세계 숙소</div>
+                <div class="title mb-10">전 세계 숙소</div>
                 <div class="home-box">
-                    <div class="home">
-                        <div class="home-img"></div>
+                    <div class="home mb-10">
+                        <div class="home-img">
+                            <img src="./images/home1.png" alt="">
+                        </div>
                         <div class="text1">오두막 BALIAN BEACH BALI</div>
                         <div class="text2">BALIAN TREEHOUSE w beautiful pool</div>
                         <div class="grade-box">
-                            <div class="star">★★★★★</div>
-                            <div class="count">185</div>
+                            <div class="star mr-5">★★★★★</div>
+                            <div class="count mr-5">185</div>
                             <div class="text3">슈퍼호스트</div>
                         </div>
                     </div>
 
-                    <div class="home">
-                        <div class="home-img"></div>
-                        <div class="text1">오두막 BALIAN BEACH BALI</div>
-                        <div class="text2">BALIAN TREEHOUSE w beautiful pool</div>
+                    <div class="home mb-10">
+                        <div class="home-img">
+                            <img src="./images/home2.png" alt="">
+                        </div>
+                        <div class="text1">키클라데스 주택 이아(OIA)</div>
+                        <div class="text2">Unique Architecture Cave House</div>
                         <div class="grade-box">
-                            <div class="star">★★★★★</div>
-                            <div class="count">185</div>
+                            <div class="star mr-5">★★★★★</div>
+                            <div class="count mr-5">188</div>
                             <div class="text3">슈퍼호스트</div>
                         </div>
                     </div>
 
-                    <div class="home">
-                        <div class="home-img"></div>
-                        <div class="text1">오두막 BALIAN BEACH BALI</div>
-                        <div class="text2">BALIAN TREEHOUSE w beautiful pool</div>
+                    <div class="home mb-10">
+                        <div class="home-img">
+                            <img src="./images/home3.png" alt="">
+                        </div>
+                        <div class="text1">성 트웬티나인 팜스(TWENTYNINE PALMS)</div>
+                        <div class="text2">Tile House</div>
                         <div class="grade-box">
-                            <div class="star">★★★★★</div>
-                            <div class="count">185</div>
+                            <div class="star mr-5">★★★★★</div>
+                            <div class="count mr-5">367</div>
                             <div class="text3">슈퍼호스트</div>
                         </div>
                     </div>
 
-                    <div class="home">
-                        <div class="home-img"></div>
-                        <div class="text1">오두막 BALIAN BEACH BALI</div>
-                        <div class="text2">BALIAN TREEHOUSE w beautiful pool</div>
+                    <div class="home mb-10">
+                        <div class="home-img">
+                            <img src="./images/home4.png" alt="">
+                        </div>
+                        <div class="text1">검증됨. 케이프타운</div>
+                        <div class="text2">Modern, Chic Penthouse with
+                            Mountain, City & Sea Views</div>
                         <div class="grade-box">
-                            <div class="star">★★★★★</div>
-                            <div class="count">185</div>
+                            <div class="star mr-5">★★★★★</div>
+                            <div class="count mr-5">177</div>
                             <div class="text3">슈퍼호스트</div>
                         </div>
                     </div>
 
-                    <div class="home">
-                        <div class="home-img"></div>
-                        <div class="text1">오두막 BALIAN BEACH BALI</div>
-                        <div class="text2">BALIAN TREEHOUSE w beautiful pool</div>
+                    <div class="home mb-10">
+                        <div class="home-img">
+                            <img src="./images/home5.png" alt="">
+                        </div>
+                        <div class="text1">아파트 전체 마드리드(MADRID)</div>
+                        <div class="text2">솔광장에 위치한 개인 스튜디오</div>
                         <div class="grade-box">
-                            <div class="star">★★★★★</div>
-                            <div class="count">185</div>
+                            <div class="star mr-5">★★★★★</div>
+                            <div class="count mr-5">459</div>
                             <div class="text3">슈퍼호스트</div>
                         </div>
                     </div>
 
-                    <div class="home">
-                        <div class="home-img"></div>
-                        <div class="text1">오두막 BALIAN BEACH BALI</div>
-                        <div class="text2">BALIAN TREEHOUSE w beautiful pool</div>
+                    <div class="home mb-10">
+                        <div class="home-img">
+                            <img src="./images/home6.png" alt="">
+                        </div>
+                        <div class="text1">집 전체 HUMAC</div>
+                        <div class="text2">Vacation house in etno-eco village Humac</div>
                         <div class="grade-box">
-                            <div class="star">★★★★★</div>
-                            <div class="count">185</div>
+                            <div class="star mr-5">★★★★★</div>
+                            <div class="count mr-5">119</div>
                             <div class="text3">슈퍼호스트</div>
                         </div>
                     </div>
 
-                    <div class="home">
-                        <div class="home-img"></div>
-                        <div class="text1">오두막 BALIAN BEACH BALI</div>
-                        <div class="text2">BALIAN TREEHOUSE w beautiful pool</div>
+                    <div class="home mb-10">
+                        <div class="home-img">
+                            <img src="./images/home7.png" alt="">
+                        </div>
+                        <div class="text1">개인실 마라케시</div>
+                        <div class="text2">The Cozy Palace</div>
                         <div class="grade-box">
-                            <div class="star">★★★★★</div>
-                            <div class="count">185</div>
+                            <div class="star mr-5">★★★★★</div>
+                            <div class="count mr-5">559</div>
                             <div class="text3">슈퍼호스트</div>
                         </div>
                     </div>
 
-                    <div class="home">
-                        <div class="home-img"></div>
-                        <div class="text1">오두막 BALIAN BEACH BALI</div>
-                        <div class="text2">BALIAN TREEHOUSE w beautiful pool</div>
+                    <div class="home mb-10">
+                        <div class="home-img">
+                            <img src="./images/home8.png" alt="">
+                        </div>
+                        <div class="text1">게스트용 별채 전체 로스앤젤레스</div>
+                        <div class="text2">Private Pool House with
+                            Amazing Views!</div>
                         <div class="grade-box">
-                            <div class="star">★★★★★</div>
-                            <div class="count">185</div>
+                            <div class="star mr-5">★★★★★</div>
+                            <div class="count mr-5">170</div>
                             <div class="text3">슈퍼호스트</div>
                         </div>
                     </div>

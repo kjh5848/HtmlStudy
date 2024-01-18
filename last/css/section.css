@@ -33,8 +33,8 @@ section {
     display: grid;
     grid-template-columns: 1fr 3fr;
     border-radius: 10px;
-    align-items: center;
     border: 1px solid #E6E6E6;
+
 
 }
 
@@ -43,7 +43,11 @@ section {
     width: 100%;
     height: 100%;
     border-radius: 5px;
+}
 
+.card-title {
+    display: flex;
+    align-items: center;
 }
 
 .ad-img1 img {

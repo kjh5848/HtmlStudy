@@ -1,0 +1,129 @@
+.body {
+    margin: 20px 80px;
+}
+
+section {
+    margin-bottom: 40px;
+
+}
+
+/* <!-- 에어비앤비 둘러보기 start --> */
+
+
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card-box {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border-radius: 10px;
+    align-items: center;
+    border: 1px solid #E6E6E6;
+
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+
+}
+
+.ad-img1 img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+
+/* <!-- 에어비앤비 둘러보기 end --> */
+
+
+/* <!-- 추천 여행지 start --> */
+
+
+.img-box {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+}
+
+.img-box img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* <!-- 추천 여행지 end --> */
+
+/* <!-- 에어비앤비 플러스를 만나보세요! start --> */
+.sub-title {
+    font-size: 15px;
+}
+
+.ad-img2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* <!-- 에어비앤비 플러스를 만나보세요! end --> */
+
+/* <!-- 전 세계 숙소 start --> */
+.home-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: space-between;
+
+}
+
+.home-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.text1 {
+    color: #C4C4C7;
+    font-size: 10px;
+}
+
+.text2 {
+    color: #61575B;
+    font-weight: bold;
+}
+
+.grade-box {
+    display: flex;
+}
+
+.star {
+    color: #528E8D;
+}
+
+.count {
+    font-size: 14px;
+}
+
+.text3 {
+    font-size: 14px;
+}
+
+/* <!-- 전 세계 숙소 end --> */
